@@ -21,7 +21,7 @@
         "../sass/layout/_team.scss",
         "../sass/layout/_client.scss",
         "../sass/layout/_futer.scss",
-        "../sass/layout/_project.scss"
+        "../sass/layout/_portfolio.scss"
     ],
     "names": [],
     "file": "main.min.css"
