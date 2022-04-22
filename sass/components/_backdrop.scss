@@ -9,11 +9,12 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -44,12 +45,12 @@
   padding: 0;
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-close-btn:focus,
-.modal-close-btn:hover {
-  outline: none;
-  fill: var(--akcent-text-color);
+  &:focus,
+  &:hover {
+    outline: none;
+    fill: var(--akcent-text-color);
+  }
 }
 
 /* ФОРМА в БЕКДРОПІ */
@@ -79,15 +80,11 @@
   box-sizing: border-box;
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact-form-input:focus {
-  outline: none;
-  border-color: var(--akcent-text-color);
-}
-
-.contact-form-input:focus + .contact-form-icon {
-  fill: var(--akcent-text-color);
+  &:focus {
+    outline: none;
+    border-color: var(--akcent-text-color);
+  }
 }
 
 .contact-form-input-wrapper {
@@ -110,6 +107,10 @@
   transform: translateY(-50%);
   display: block;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contact-form-input:focus + & {
+    fill: var(--akcent-text-color);
+  }
 }
 
 .contact-form-message {
@@ -122,20 +123,20 @@
   box-sizing: border-box;
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact-form-message:focus {
-  outline: none;
-  border-color: var(--akcent-text-color);
-}
+  &:focus {
+    outline: none;
+    border-color: var(--akcent-text-color);
+  }
 
-.contact-form-message::placeholder {
-  font-family: var(--primary-font-famili);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-family: var(--primary-font-famili);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .contact-form-checkbox-wrapper {
@@ -152,31 +153,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &::before {
+    content: ' ';
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    margin-right: 7px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .contact-form-checkbox:focus + & {
+      outline: none;
+      border-color: var(--akcent-text-color);
+    }
+    .contact-form-checkbox:checked + & {
+      background-image: url('../images/icon-check.svg');
+      border: none;
+    }
+  }
 }
 
 .policy-checkbox-link {
   color: var(--akcent-text-color);
-}
-
-.contact-form-checkbox-label::before {
-  content: ' ';
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  cursor: pointer;
-  border: 1px solid #000000;
-  margin-right: 7px;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-form-checkbox:focus + .contact-form-checkbox-label::before {
-  outline: none;
-  border-color: var(--akcent-text-color);
-}
-.contact-form-checkbox:checked + .contact-form-checkbox-label::before {
-  background-image: url('../images/icon-check.svg');
-  border: none;
 }
 
 .contact-form-submit-btn {
@@ -197,9 +197,9 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact-form-submit-btn:hover,
-.contact-form-submit-btn:focus {
-  background: #188ce8;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
 }

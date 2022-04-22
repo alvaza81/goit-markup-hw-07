@@ -1,19 +1,20 @@
 .work {
   display: flex;
+  justify-content: space-between;
 }
 
-.work .item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
+.work-item {
+  // width: calc((100% - 60px) / 3);
+  // margin-right: 30px;
   position: relative;
   display: flex;
   align-items: flex-end;
 }
 
-.work .item:nth-child(3n) {
-  margin-right: 0;
-  margin-bottom: 0;
-}
+// .work .item:nth-child(3n) {
+//   margin-right: 0;
+//   margin-bottom: 0;
+// }
 
 .work-foto {
   display: block;
@@ -22,7 +23,7 @@
   margin-right: auto;
   margin-left: auto;
 }
-.work .paragraph {
+.work-paragraph {
   font-family: var(--primary-font-famili);
   font-weight: 700;
   font-size: 14px;

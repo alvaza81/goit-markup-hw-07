@@ -5,12 +5,12 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
 
-.logo .dark {
-  color: #000000;
-}
+  & .dark {
+    color: #000000;
+  }
 
-.logo .lite {
-  color: var(--wite-text-color);
+  & .lite {
+    color: var(--wite-text-color);
+  }
 }
