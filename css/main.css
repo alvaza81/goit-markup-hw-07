@@ -363,10 +363,6 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.container.button {
-  margin-bottom: 34px;
-}
-
 .main-nav {
   display: flex;
   align-items: center;
@@ -387,7 +383,7 @@ body {
   margin-left: 50px;
 }
 
-.site-nav .link {
+.site-nav-link {
   padding: 32px 0;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -398,7 +394,15 @@ body {
   position: relative;
 }
 
-.site-nav .link.current::after {
+.site-nav-link:hover, .site-nav-link:focus {
+  color: var(--akcent-text-color);
+}
+
+.site-nav-link-current {
+  color: var(--akcent-text-color);
+}
+
+.site-nav-link-current::after {
   content: '';
   display: block;
   width: 100%;
@@ -408,15 +412,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--akcent-text-color);
-}
-
-.site-nav .link.current {
-  color: var(--akcent-text-color);
 }
 
 /* Навигация авторизации */
@@ -474,14 +469,11 @@ body {
 
 .feature-list {
   display: flex;
+  justify-content: space-between;
 }
 
-.feature-list .item {
+.feature-list-item {
   width: calc((100% - 90px) / 4);
-}
-
-.feature-list .item + .item {
-  margin-left: 30px;
 }
 
 .feature-container {
@@ -493,7 +485,7 @@ body {
   margin-bottom: 30px;
 }
 
-.feature-list .title {
+.feature-list-title {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
@@ -503,9 +495,8 @@ body {
   text-transform: uppercase;
 }
 
-.feature-list .paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
+.feature-list-paragraph {
+  margin: 0;
   color: var(--secondary-text-color);
   font-size: 14px;
   line-height: 1.71;

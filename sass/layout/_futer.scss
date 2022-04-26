@@ -12,10 +12,10 @@
 
 .address-studio-item {
   margin-bottom: 9px;
-}
 
-.address-studio-item:nth-child(3n) {
-  margin-bottom: 0;
+  &:nth-child(3n) {
+    margin-bottom: 0;
+  }
 }
 
 .post-address {
@@ -78,10 +78,11 @@
   display: block;
   width: calc((100% - 30px) / 4);
   margin-right: 10px;
-}
-.join-list-item:nth-child(4n) {
-  margin-right: 0;
-  margin-bottom: 0;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 .join-list-link {

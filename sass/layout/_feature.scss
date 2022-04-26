@@ -1,14 +1,15 @@
 .feature-list {
   display: flex;
+  justify-content: space-between;
 }
 
-.feature-list .item {
+.feature-list-item {
   width: calc((100% - 90px) / 4);
 }
 
-.feature-list .item + .item {
-  margin-left: 30px;
-}
+// .feature-list-item + .feature-list-item {
+//   margin-left: 30px;
+// }
 .feature-container {
   padding: 25px 100px;
   width: 270px;
@@ -18,7 +19,7 @@
   margin-bottom: 30px;
 }
 
-.feature-list .title {
+.feature-list-title {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
@@ -28,9 +29,9 @@
   text-transform: uppercase;
 }
 
-.feature-list .paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
+.feature-list-paragraph {
+  margin: 0;
+  // margin-bottom: 0;
   color: var(--secondary-text-color);
   font-size: 14px;
   line-height: 1.71;
