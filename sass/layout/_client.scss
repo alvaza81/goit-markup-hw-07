@@ -8,7 +8,7 @@
 //   margin-bottom: 0;
 // }
 
-.client-list-button {
+.client-list__button {
   display: block;
   background-color: var(--primary-bg-color);
   color: var(--svg-icon-fill);
@@ -32,7 +32,7 @@
   }
 }
 
-.client-list-icon {
+.client-list__icon {
   width: 106px;
   height: 60px;
   fill: currentColor;

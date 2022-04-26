@@ -27,7 +27,7 @@
   clip: rect(0 0 0 0);
 }
 
-.join-list-link {
+.join-list__link {
   display: flex;
   align-items: center;
 }
@@ -113,21 +113,11 @@ body {
 
 .social-list {
   display: flex;
+  justify-content: space-between;
   padding: 0 32px 30px 32px;
 }
 
-.social-list-item {
-  display: block;
-  width: calc((100% - 30px) / 4);
-  margin-right: 10px;
-}
-
-.social-list-item:nth-child(4n) {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.social-list-link {
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +128,7 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list-link:hover, .social-list-link:focus {
+.social-list__link:hover, .social-list__link:focus {
   background-color: var(--akcent-bg-color);
   fill: var(--wite-text-color);
 }
@@ -529,8 +519,7 @@ body {
   margin-left: auto;
 }
 
-.work-paragraph {
-  font-family: var(--primary-font-famili);
+.work__paragraph {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -555,7 +544,7 @@ body {
   display: flex;
 }
 
-.team-lid {
+.team-list__lid {
   background-color: var(--primary-bg-color);
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
@@ -563,11 +552,11 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-lid:nth-child(4n) {
+.team-list__lid:nth-child(4n) {
   margin-right: 0;
 }
 
-.foto {
+.team-list__foto {
   display: block;
   max-width: 100%;
   height: auto;
@@ -575,12 +564,12 @@ body {
   margin-left: auto;
 }
 
-.team-description {
+.team-list__description {
   padding: 30px 59px 0 59px;
   margin-bottom: 16px;
 }
 
-.team-description .title {
+.team-list__title {
   margin: 0 0 10px 0;
   font-weight: 500;
   font-size: 16px;
@@ -589,7 +578,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team-list .paragraph {
+.team-list__paragraph {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--secondary-text-color);
@@ -604,7 +593,7 @@ body {
   justify-content: space-between;
 }
 
-.client-list-button {
+.client-list__button {
   display: block;
   background-color: var(--primary-bg-color);
   color: var(--svg-icon-fill);
@@ -618,7 +607,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-list-button:hover, .client-list-button:focus {
+.client-list__button:hover, .client-list__button:focus {
   outline: none;
   border: 1px solid var(--akcent-text-color);
   box-sizing: border-box;
@@ -626,7 +615,7 @@ body {
   color: var(--akcent-text-color);
 }
 
-.client-list-icon {
+.client-list__icon {
   width: 106px;
   height: 60px;
   fill: currentColor;
@@ -643,15 +632,15 @@ body {
   margin-top: 20px;
 }
 
-.address-studio-item {
+.address-studio__item {
   margin-bottom: 9px;
 }
 
-.address-studio-item:nth-child(3n) {
+.address-studio__item:nth-child(3n) {
   margin-bottom: 0;
 }
 
-.post-address {
+.address-studio__post {
   color: var(--wite-text-color);
   font-style: normal;
   font-size: 14px;
@@ -660,11 +649,11 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.post-address:hover, .post-address:focus {
+.address-studio__post:hover, .address-studio__post:focus {
   color: var(--akcent-text-color);
 }
 
-.address-studio-contact {
+.address-studio__contact {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -673,23 +662,23 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-studio-contact:hover, .address-studio-contact:focus {
+.address-studio__contact:hover, .address-studio__contact:focus {
   color: var(--akcent-text-color);
 }
 
-.join {
+.join__title {
   margin: 0;
   text-transform: uppercase;
   color: var(--wite-text-color);
   font-family: var(--primary-font-famili);
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-.join-link {
+.join {
   padding-top: 12px;
 }
 
@@ -704,20 +693,21 @@ body {
 .join-list {
   display: flex;
   padding: 0;
+  margin: 20px 0 0 0;
 }
 
-.join-list-item {
+.join-list__item {
   display: block;
   width: calc((100% - 30px) / 4);
   margin-right: 10px;
 }
 
-.join-list-item:nth-child(4n) {
+.join-list__item:nth-child(4n) {
   margin-right: 0;
   margin-bottom: 0;
 }
 
-.join-list-link {
+.join-list__link {
   justify-content: center;
   width: 44px;
   height: 44px;
@@ -727,20 +717,20 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.join-list-link:hover, .join-list-link:focus {
+.join-list__link:hover, .join-list__link:focus {
   background-color: var(--akcent-bg-color);
   fill: var(--wite-text-color);
 }
 
 /* ФОРМА в ФУТЕРІ */
-.subscription {
+.subscription-form {
   padding-top: 12px;
   display: block;
   margin-left: auto;
   min-width: 570px;
 }
 
-.subscription-paragraph {
+.subscription-form__paragraph {
   margin: 0;
   font-family: var(--primary-font-famili);
   font-weight: 700;
@@ -751,12 +741,12 @@ body {
   color: var(--wite-text-color);
 }
 
-.subscription-form-input-wrapper {
+.subscription-form__input-wrapper {
   display: flex;
   margin-top: 20px;
 }
 
-.subscription-form-input {
+.subscription-form__input {
   margin-right: 12px;
   padding: 15px 0 15px 16px;
   width: 358px;
@@ -775,7 +765,7 @@ body {
   color: var(--wite-text-color);
 }
 
-.subscription-form-input::placeholder {
+.subscription-form__input::placeholder {
   font-family: var(--primary-font-famili);
   font-weight: 400;
   font-size: 16px;
@@ -786,7 +776,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscription-form-submit-btn {
+.subscription-form__submit-btn {
   font-family: var(--primary-font-famili);
   font-weight: bold;
   font-size: 16px;
@@ -805,11 +795,11 @@ body {
   cursor: pointer;
 }
 
-.subscription-form-conteiner-btn {
+.subscription-form__conteiner-btn {
   position: relative;
 }
 
-.subscription-form-icon {
+.subscription-form__icon {
   position: absolute;
   top: 15px;
   right: 30px;
